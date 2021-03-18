@@ -5,7 +5,7 @@ interface InputFieldProps {
 }
 
 export const InputField: React.FC<InputFieldProps> = ({ addTodo }) => {
-  const [value, setValue] = useState<any>("");
+  const [value, setValue] = useState<string>("");
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -19,10 +19,12 @@ export const InputField: React.FC<InputFieldProps> = ({ addTodo }) => {
       <input
         type="text"
         value={value}
+        className="InputField"
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           setValue(e.target.value)
         }
       />
+      <button>Add</button>
     </form>
   );
 };
