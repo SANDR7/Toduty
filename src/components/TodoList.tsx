@@ -35,13 +35,25 @@ export const TodoList: React.FC<TodoListProps> = () => {
   // const addTodo = (id) => {
   //   const newTodo = [...todo, {}];
   // };
+  const completeTodo = (index: number) => {
+    const newTodo = [...todo];
+    newTodo[index].completed = true;
+    setTodo(newTodo);
+  };
   return (
     <div className="tdo-container">
       {tasksRemaining}
       <InputField addTodo={addTodo} />
-      {todo.map((todo, index) => (
-        <Todo todo={todo} index={index} key={index}/>
-      ))}
+      <div className="TodoItems">
+        {todo.map((todo, index) => (
+          <Todo
+            todo={todo}
+            index={index}
+            key={index}
+            completeTodo={completeTodo}
+          />
+        ))}
+      </div>
     </div>
   );
 };
