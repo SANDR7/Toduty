@@ -1,0 +1,22 @@
+$whiteSpace: (
+  Padding: (
+    card: 2em 4em,
+    main: 4rem 10rem,
+    inputField: 1.5rem 2rem,
+    btn: .2em .5em,
+  ),
+  Margin: (
+    auto: auto,
+  ),
+);
+
+@function getSpace($mapSpace, $keys...) {
+  @each $key in $keys {
+    $mapSpace: map-get($mapSpace, $key);
+  }
+  @return $mapSpace;
+}
+
+
+// Global Variables
+$defaultDuration: .44s;

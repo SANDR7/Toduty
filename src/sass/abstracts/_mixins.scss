@@ -1,0 +1,7 @@
+@use './vars' as *;
+
+@mixin Transition {
+  transition-property: all;
+  transition: $defaultDuration cubic-bezier(0.78, 1.01, 0.57, 0.47);
+}
+

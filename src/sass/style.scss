@@ -1,1 +1,19 @@
-@use './components';
+@use './abstracts' as A;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  @include A.Transition();
+  background-color: A.getColor(A.$colors, primary, 50);
+  font-family: "Poppins", sans-serif;
+}
+.App {
+  padding: A.getSpace(A.$whiteSpace, Padding, main);
+}
+button {
+  font-size: A.getSize(A.$fontSizes, btn);
+  padding: A.getSpace(A.$whiteSpace, Padding, btn);
+}

@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+$fontSizes: (
+  h1: 2rem,
+  h2: 1.8rem,
+  h3: 1.6rem,
+  p: 1rem,
+  p2: 18px,
+  btn: 16px,
+);
+
+@function getSize($mapFontSize, $keys...) {
+  @each $key in $keys {
+    $mapFontSize: map-get($mapFontSize, $key);
+  }
+  @return $mapFontSize;
+}

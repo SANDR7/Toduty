@@ -1,0 +1,33 @@
+$colors: (
+  primary: (
+    50: hsl(44, 98%, 90%),
+    100: hsl(44, 98%, 70%),
+    200: hsl(44, 98%, 65%),
+    300: hsl(44, 98%, 60%),
+    400: hsl(44, 98%, 55%),
+    500: hsl(44, 98%, 50%),
+    600: hsl(44, 89%, 45%),
+  ),
+  neutral: (
+    // light
+    110: hsl(0, 0%, 100%),
+    210: hsl(0, 0%, 75%),
+    310: hsl(0, 0%, 50%),
+    410: hsl(0, 0%, 25%),
+    // dark
+    120: hsl(0, 0%, 5%),
+    220: hsl(0, 0%, 10%),
+    320: hsl(0, 0%, 15%),
+    420: hsl(0, 0%, 20%),
+  ),
+);
+
+@function getColor($map, $ids...) {
+  @each $id in $ids {
+    $map: map-get($map, $id);
+  }
+  @return $map;
+}
+
+// voorbeeld
+// color: getColor($colors, primary, 100);

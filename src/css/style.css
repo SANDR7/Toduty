@@ -1,3 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  transition-property: all;
+  transition: 0.44s cubic-bezier(0.78, 1.01, 0.57, 0.47);
+  background-color: #fef1cd;
+  font-family: "Poppins", sans-serif;
+}
+
+.App {
+  padding: 4rem 10rem;
+}
+
+button {
+  font-size: 16px;
+  padding: 0.2em 0.5em;
+}
 
 /*# sourceMappingURL=style.css.map */
