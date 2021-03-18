@@ -20,6 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "sass": "sass src/sass/style.scss src/css/style.css --watch",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -34,7 +35,9 @@
     "production": [
       ">0.2%",
       "not dead",
-      "not op_mini all"
+      "not ie <= 11",
+      "not op_mini all",
+      "ie 10" 
     ],
     "development": [
       "last 1 chrome version",
