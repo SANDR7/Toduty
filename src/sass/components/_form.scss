@@ -1,0 +1,31 @@
+@use '../abstracts' as *;
+form {
+  padding: getSpace($whiteSpace, Padding, form);
+  input {
+    padding: getSpace($whiteSpace, Padding, inputField);
+    border-radius: $borderRadius;
+    border: solid 1px getColor($colors, neutral, 220);
+    min-width: 55%;
+    @include mediaQ(small) {
+      min-width: 80%
+    }
+    @include mediaQ(large) {
+      min-width: 30%
+    }
+  }
+  button {
+    @include Transition;
+    border-radius: $borderRadius2;
+    margin: 0 1em;
+    border: none;
+    outline: none;
+    padding: getSpace($whiteSpace, Padding, btn);
+    background-color: getColor($colors, primary, 610);
+    color: getColor($colors, neutral, 110);
+    &:hover,
+    &:focus {
+      filter: brightness(140%);
+      cursor: pointer;
+    }
+  }
+}

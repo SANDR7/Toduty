@@ -1,12 +1,16 @@
 $whiteSpace: (
   Padding: (
-    card: 2em 4em,
-    main: 4rem 10rem,
-    inputField: 1.5rem 2rem,
-    btn: .2em .5em,
+    main: 2rem 3rem,
+    header: 2em 3em,
+    card: 1em 1.5em,
+    inputField: .7rem .5rem,
+    form: 2em 0,
+    btn: .7em 2.5em,
+    btn2: .5em 1em,
   ),
   Margin: (
     auto: auto,
+    card: 1.5em 0,
   ),
 );
 
@@ -20,3 +24,5 @@ $whiteSpace: (
 
 // Global Variables
 $defaultDuration: .44s;
+$borderRadius: 6px;
+$borderRadius2: 6px;

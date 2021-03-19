@@ -1,0 +1,11 @@
+@use '../abstracts' as *;
+header {
+  background-color: transparent;
+  width: 100%;
+  padding: getSpace($whiteSpace, Padding, header);
+  div {
+  }
+  img {
+    height: 6em;
+  }
+}

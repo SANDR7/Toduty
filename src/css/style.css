@@ -13,12 +13,113 @@ body {
 }
 
 .App {
-  padding: 4rem 10rem;
+  padding: 2rem 3rem;
+  max-width: 1800px;
+  margin: auto;
 }
 
 button {
   font-size: 16px;
-  padding: 0.2em 0.5em;
+  padding: 0.7em 2.5em;
+}
+
+.TodoItems {
+  border-radius: 6px;
+  background-color: #fff5dc;
+  padding: 1em 1.5em;
+  width: 100%;
+}
+.TodoItems .todoItem {
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 6px;
+  margin: 1.5em 0;
+  padding: 1em 1.5em;
+  background: white;
+}
+.TodoItems .todoItem-header {
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+@media (min-width: 768px) {
+  .TodoItems .todoItem {
+    flex-direction: column;
+  }
+}
+@media (min-width: 1024px) {
+  .TodoItems .todoItem {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+  }
+}
+@media (min-width: 1300px) {
+  .TodoItems .todoItem {
+    width: 75%;
+  }
+}
+.TodoItems .todoItem button {
+  padding: 0.5em 1em;
+}
+@media (min-width: 768px) {
+  .TodoItems {
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .TodoItems {
+    width: 100%;
+  }
+}
+@media (min-width: 1300px) {
+  .TodoItems {
+    width: 75%;
+  }
+}
+
+form {
+  padding: 2em 0;
+}
+form input {
+  padding: 0.7rem 0.5rem;
+  border-radius: 6px;
+  border: solid 1px #1a1a1a;
+  min-width: 55%;
+}
+@media (min-width: 768px) {
+  form input {
+    min-width: 80%;
+  }
+}
+@media (min-width: 1300px) {
+  form input {
+    min-width: 30%;
+  }
+}
+form button {
+  transition-property: all;
+  transition: 0.44s cubic-bezier(0.78, 1.01, 0.57, 0.47);
+  border-radius: 6px;
+  margin: 0 1em;
+  border: none;
+  outline: none;
+  padding: 0.7em 2.5em;
+  background-color: #2f45d0;
+  color: white;
+}
+form button:hover, form button:focus {
+  filter: brightness(140%);
+  cursor: pointer;
+}
+
+header {
+  background-color: transparent;
+  width: 100%;
+  padding: 2em 3em;
+}
+header img {
+  height: 6em;
 }
 
 /*# sourceMappingURL=style.css.map */

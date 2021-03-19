@@ -1,0 +1,46 @@
+@use '../abstracts/' as *;
+
+.TodoItems {
+  border-radius: $borderRadius;
+  background-color: getColor($colors, primary, 45);
+  padding: getSpace($whiteSpace, Padding, card);
+  width: 100%;
+  .todoItem {
+    // display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    border-radius: $borderRadius;
+    margin: getSpace($whiteSpace, Margin, card);
+    padding: getSpace($whiteSpace, Padding, card);
+    background: white;
+    &-header {
+      white-space: normal;
+      overflow-wrap: break-word;
+    }
+    @include mediaQ(small) {
+      flex-direction: column;
+    }
+    @include mediaQ(medium) {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+    }
+    @include mediaQ(large) {
+      width: 75%;
+    }
+    button {
+      // background: ;
+      padding: getSpace($whiteSpace, Padding, btn2);
+    }
+  }
+  @include mediaQ(small) {
+    width: 100%;
+  }
+  @include mediaQ(medium) {
+    width: 100%;
+  }
+  @include mediaQ(large) {
+    width: 75%;
+  }
+}
