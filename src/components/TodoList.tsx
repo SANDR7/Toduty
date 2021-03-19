@@ -40,12 +40,15 @@ export const TodoList: React.FC<TodoListProps> = () => {
     newTodo[index].completed = true;
     setTodo(newTodo);
   };
+
+  const removeTodo = (index: number) => {
+    const newTodo = [...todo];
+    newTodo.splice(index, 1);
+    setTodo(newTodo);
+  };
   return (
     <div className="tdo-container">
-      <div>
-      {tasksRemaining} remaining todo's
-
-      </div>
+      <div>{tasksRemaining} remaining todo's</div>
       <InputField addTodo={addTodo} />
       <div className="TodoItems">
         {todo.map((todo, index) => (
@@ -54,6 +57,7 @@ export const TodoList: React.FC<TodoListProps> = () => {
             index={index}
             key={index}
             completeTodo={completeTodo}
+            removeTodo={removeTodo}
           />
         ))}
       </div>
