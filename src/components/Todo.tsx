@@ -16,7 +16,11 @@ export const Todo: React.FC<TodoProps> = ({
   return (
     <div className="todoItem">
       <span className="todoItem-header">{todo.title}</span>
-      {/* <button onClick={() => completeTodo(index)}>Complete</button> */}
+      <div>
+      <button onClick={() => completeTodo(index)}>Complete</button>
+      <button onClick={() => completeTodo(index)}>Remove</button>
+
+      </div>
     </div>
   );
 };
