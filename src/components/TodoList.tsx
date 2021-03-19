@@ -42,7 +42,10 @@ export const TodoList: React.FC<TodoListProps> = () => {
   };
   return (
     <div className="tdo-container">
-      {tasksRemaining}
+      <div>
+      {tasksRemaining} remaining todo's
+
+      </div>
       <InputField addTodo={addTodo} />
       <div className="TodoItems">
         {todo.map((todo, index) => (
